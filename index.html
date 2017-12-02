@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Shapes Game!</title>
+  </head>
+  <body>
+    <h1>The Shapes Game!</h1>
+    <p></p>
+    <img id="square" src="http://www.clker.com/cliparts/b/e/c/3/131406375432193858green%20square.png" width="100" height="100"/>
+    <img id="circle" src="http://www.clker.com/cliparts/I/c/S/R/R/u/yellow-circle-icon-hi.png"width="100" height="100"/>
+    <img id="oval" src="http://www.publicdomainpictures.net/pictures/70000/velka/ellipse-frame-2.jpg"width="150" height="100" />
+    <img id="rectangle" src="http://www.clker.com/cliparts/b/e/c/3/131406375432193858green%20square.png" width="50" height="100"/>
+    <img id="triangle" src="http://www.publicdomainpictures.net/pictures/40000/velka/basic-triangle-outline.jpg"width="100"height="100"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function() {
+      var shapes = ["square", "circle", "oval", "rectangle", "triangle"];
+      var correct = shapes[Math.floor(Math.random()*shapes.length)];
+      $("p").text("Click on the " + correct);
+      $("#square").click(function() {
+        if (correct === "square") {
+          alert("Correct!");
+          correct = shapes[Math.floor(Math.random()*shapes.length)];
+          $("p").text("Click on the " + correct);
+        } else {
+          alert("Try again!");
+        }
+      });
+      $("#circle").click(function() {
+        if (correct === "circle") {
+          alert("Correct!");
+          correct = shapes[Math.floor(Math.random()*shapes.length)];
+          $("p").text("Click on the " + correct);
+        } else {
+          alert("Try again!");
+        }
+      });
+      $("#triangle").click(function() {
+        if (correct === "triangle") {
+          alert("Correct!");
+          correct = shapes[Math.floor(Math.random()*shapes.length)];
+          $("p").text("Click on the " + correct);
+        } else {
+          alert("Try again!");
+        }
+      });
+      $("#oval").click(function() {
+        if (correct === "oval") {
+          alert("Correct!");
+          correct = shapes[Math.floor(Math.random()*shapes.length)];
+          $("p").text("Click on the " + correct);
+        } else {
+          alert("Try again!");
+        }
+      });
+      $("#rectangle").click(function() {
+        if (correct === "rectangle") {
+          alert("Correct!");
+          correct = shapes[Math.floor(Math.random()*shapes.length)];
+          $("p").text("Click on the " + correct);
+        } else {
+          alert("Try again!");
+        }
+      });
+    });
+    </script>
+  </body>
+</html>
