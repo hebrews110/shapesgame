@@ -7,118 +7,62 @@
   <body>
     <h1>The Shapes Game!</h1>
     <p></p>
-    <img id="square" src="http://www.clker.com/cliparts/b/e/c/3/131406375432193858green%20square.png" width="100" height=auto/>
-    <img id="hexagon" src="http://www.clker.com/cliparts/d/4/2/2/1194987036607695056fc16.svg.med.png"width="100" height=auto/>
-    <img id="pentagon" src="http://www.clker.com/cliparts/b/v/q/c/L/8/pentagon-md.png"width="100" height=auto />
-    <img id="octagon" src="http://www.clker.com/cliparts/0/a/n/X/C/P/octagon-md.png" width="100" height=auto/>
-    <img id="triangle" src="http://www.publicdomainpictures.net/pictures/40000/velka/basic-triangle-outline.jpg"width="100" height=auto/>
+    <img id="square" src="http://www.clker.com/cliparts/b/e/c/3/131406375432193858green%20square.png" width="100" height="100"/>
+    <img id="circle" src="http://www.clker.com/cliparts/I/c/S/R/R/u/yellow-circle-icon-hi.png"width="100" height="100"/>
+    <img id="oval" src="http://www.publicdomainpictures.net/pictures/70000/velka/ellipse-frame-2.jpg"width="150" height="100" />
+    <img id="rectangle" src="http://www.clker.com/cliparts/b/e/c/3/131406375432193858green%20square.png" width="50" height="100"/>
+    <img id="triangle" src="http://www.publicdomainpictures.net/pictures/40000/velka/basic-triangle-outline.jpg"width="100"height="100"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>
     $(document).ready(function() {
-      var shapes = ["square", "hexagon", "pentagon", "octagon", "triangle"];
+      var shapes = ["square", "circle", "oval", "rectangle", "triangle"];
       var correct = shapes[Math.floor(Math.random()*shapes.length)];
-
-      $("p").text("Click on the " + correct+ '.');
-
+      $("p").text("Click on the " + correct);
       $("#square").click(function() {
         if (correct === "square") {
           alert("Correct!");
-          for( var i = 0; i < shapes.length; i++){
-     if ( shapes[i] === 'square') {
-       shapes.splice(i, 1);
-     }
-  }
-    if(shapes.length == 0){
-      alert("Game Over");
-      return;
-    }
           correct = shapes[Math.floor(Math.random()*shapes.length)];
-          $("p").text("Click on the " + correct + '.');
+          $("p").text("Click on the " + correct);
         } else {
           alert("Try again!");
         }
-
       });
-
-      $("#hexagon").click(function() {
-        if (correct === "hexagon") {
+      $("#circle").click(function() {
+        if (correct === "circle") {
           alert("Correct!");
-          for( var i = 0; i < shapes.length; i++){
-     if ( shapes[i] === 'hexagon') {
-       shapes.splice(i, 1);
-     }
-  }
-  if(shapes.length == 0){
-    alert("Game Over");
-    return;
-  }
           correct = shapes[Math.floor(Math.random()*shapes.length)];
-          $("p").text("Click on the " + correct+ '.');
+          $("p").text("Click on the " + correct);
         } else {
           alert("Try again!");
         }
       });
-
-
       $("#triangle").click(function() {
         if (correct === "triangle") {
           alert("Correct!");
-          for( var i = 0; i < shapes.length; i++){
-     if ( shapes[i] === 'triangle') {
-       shapes.splice(i, 1);
-     }
-  }
-  if(shapes.length == 0){
-    alert("Game Over");
-    return;
-  }
           correct = shapes[Math.floor(Math.random()*shapes.length)];
-          $("p").text("Click on the " + correct+ '.');
+          $("p").text("Click on the " + correct);
         } else {
           alert("Try again!");
         }
-
       });
-
-
-      $("#pentagon").click(function() {
-        if (correct === "pentagon") {
+      $("#oval").click(function() {
+        if (correct === "oval") {
           alert("Correct!");
-          for( var i = 0; i < shapes.length; i++){
-     if ( shapes[i] === 'pentagon') {
-       shapes.splice(i, 1);
-     }
-  }
-  if(shapes.length == 0){
-    alert("Game Over");
-    return;
-  }
           correct = shapes[Math.floor(Math.random()*shapes.length)];
-          $("p").text("Click on the " + correct+ '.');
+          $("p").text("Click on the " + correct);
         } else {
           alert("Try again!");
         }
       });
-
-      $("#octagon").click(function() {
-        if (correct === "octagon") {
+      $("#rectangle").click(function() {
+        if (correct === "rectangle") {
           alert("Correct!");
-          for( var i = 0; i < shapes.length; i++){
-     if ( shapes[i] === 'octagon') {
-       shapes.splice(i, 1);
-     }
-  }
-  if(shapes.length == 0){
-    alert("Game Over");
-    return;
-  }
           correct = shapes[Math.floor(Math.random()*shapes.length)];
-          $("p").text("Click on the " + correct+ '.');
+          $("p").text("Click on the " + correct);
         } else {
           alert("Try again!");
         }
       });
-
     });
     </script>
   </body>
