@@ -3,66 +3,143 @@
   <head>
     <meta charset="utf-8">
     <title>Shapes Game!</title>
+    <style>
+        img:hover{
+          cursor: pointer;
+        }
+    </style>
   </head>
   <body>
     <h1>The Shapes Game!</h1>
-    <p></p>
-    <img id="square" src="http://www.clker.com/cliparts/b/e/c/3/131406375432193858green%20square.png" width="100" height="100"/>
-    <img id="circle" src="http://www.clker.com/cliparts/I/c/S/R/R/u/yellow-circle-icon-hi.png"width="100" height="100"/>
-    <img id="oval" src="http://www.publicdomainpictures.net/pictures/70000/velka/ellipse-frame-2.jpg"width="150" height="100" />
-    <img id="rectangle" src="http://www.clker.com/cliparts/b/e/c/3/131406375432193858green%20square.png" width="50" height="100"/>
-    <img id="triangle" src="http://www.publicdomainpictures.net/pictures/40000/velka/basic-triangle-outline.jpg"width="100"height="100"/>
+    <p style="font-size:1.8rem;"></p>
+    </br>
+    <img id="square" src="http://epallinone.com/images/square-green.png" width="100" height="100"/>
+    <img id="circle" src="http://epallinone.com/images/circle-pink.png"width="100" height="100"/>
+    <img id="oval" src="http://epallinone.com/images/oval-green.jpg"width="150" height="100" />
+    <img id="rectangle" src="http://epallinone.com/images/rectangle-green.png" width="50" height="100"/>
+    <img id="triangle" src="http://epallinone.com/images/triangle-white.jpg"width="100"height="100"/>
+    <img id="star" src="http://epallinone.com/images/star-yellow.png"width="100"height="100"/>
+    <img id="diamond" src="http://epallinone.com/images/diamond-pink.png"width="100"height="100"/>
+    </br>
+    </br>
+    <h1 id="response">Click on your answer.</h1>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>
     $(document).ready(function() {
-      var shapes = ["square", "circle", "oval", "rectangle", "triangle"];
-      var correct = shapes[Math.floor(Math.random()*shapes.length)];
-      $("p").text("Click on the " + correct);
+      var shapes = ["square", "circle", "oval", "rectangle", "triangle", "diamond", "star"];
+      var L = shapes.length - 1;
+      for(i=L; i > 0; i--){
+        const j = Math.floor(Math.random() * i);
+        const temp = shapes[i];
+        shapes[i] = shapes[j];
+        shapes[j] = temp;
+      };
+
+      var i=0;
+      var correct = shapes[i];
+
+      $("p").text("Find the " + correct + ".");
       $("#square").click(function() {
         if (correct === "square") {
-          alert("Correct!");
-          correct = shapes[Math.floor(Math.random()*shapes.length)];
-          $("p").text("Click on the " + correct);
+          $("#response").text("Correct!");
+          i++;
+          correct = shapes[i];
+          if(i==shapes.length){
+            $("#response").text("You did it!");
+            return;
+          }
+          $("p").text("Find the " + correct + ".");
         } else {
-          alert("Try again!");
+          $("#response").text("Try Again!");
         }
       });
       $("#circle").click(function() {
         if (correct === "circle") {
-          alert("Correct!");
-          correct = shapes[Math.floor(Math.random()*shapes.length)];
-          $("p").text("Click on the " + correct);
+          $("#response").text("Correct!");
+          i++;
+          correct = shapes[i];
+          if(i==shapes.length){
+            $("#response").text("You did it!");
+            return;
+          }
+          $("p").text("Find the " + correct + ".");
         } else {
-          alert("Try again!");
+          $("#response").text("Try Again!");
         }
       });
       $("#triangle").click(function() {
         if (correct === "triangle") {
-          alert("Correct!");
-          correct = shapes[Math.floor(Math.random()*shapes.length)];
-          $("p").text("Click on the " + correct);
+          $("#response").text("Correct!");
+          i++;
+          correct = shapes[i];
+          if(i==shapes.length){
+            $("#response").text("You did it!");
+            return;
+          }
+          $("p").text("Find the " + correct + ".");
         } else {
-          alert("Try again!");
+          $("#response").text("Try Again!");
         }
       });
       $("#oval").click(function() {
         if (correct === "oval") {
-          alert("Correct!");
-          correct = shapes[Math.floor(Math.random()*shapes.length)];
-          $("p").text("Click on the " + correct);
+          $("#response").text("Correct!");
+          i++;
+          correct = shapes[i];
+          if(i==shapes.length){
+            $("#response").text("You did it!");
+            return;
+          }
+          $("p").text("Find the " + correct + ".");
         } else {
-          alert("Try again!");
+          $("#response").text("Try Again!");
         }
       });
       $("#rectangle").click(function() {
         if (correct === "rectangle") {
-          alert("Correct!");
-          correct = shapes[Math.floor(Math.random()*shapes.length)];
-          $("p").text("Click on the " + correct);
+          $("#response").text("Correct!");
+          i++;
+          correct = shapes[i];
+          if(i==shapes.length){
+            $("#response").text("You did it!");
+            return;
+          }
+          $("p").text("Find the " + correct + ".");
         } else {
-          alert("Try again!");
+          $("#response").text("Try Again!");
         }
       });
+
+      $("#diamond").click(function() {
+        if (correct === "diamond") {
+          $("#response").text("Correct!");
+          i++;
+          correct = shapes[i];
+          if(i==shapes.length){
+            $("#response").text("You did it!");
+            return;
+          }
+          $("p").text("Find the " + correct + ".");
+        } else {
+          $("#response").text("Try Again!");
+        }
+      });
+
+      $("#star").click(function() {
+        if (correct === "star") {
+          $("#response").text("Correct!");
+          i++;
+          correct = shapes[i];
+          if(i==shapes.length){
+            $("#response").text("You did it!");
+            return;
+          }
+          $("p").text("Find the " + correct + ".");
+        } else {
+          $("#response").text("Try Again!");
+        }
+      });
+
     });
     </script>
   </body>
